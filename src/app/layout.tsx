@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import Header from "@/components/Header";
 import TopLeftImg from "@/components/TopLeftImg";
 
+
 const sora = Sora({ 
   subsets: ["latin"],
   variable: '--font-sora',
@@ -24,10 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`page bg-site text-white bg-cover bg-no-repeat ${sora.className} font-sora relative`}>
-      <TopLeftImg />
+        <TopLeftImg />
         <Nav />
         <Header />
-        {children}
+        <main>
+            {children}
+        </main>
       </body>
     </html>
   );
