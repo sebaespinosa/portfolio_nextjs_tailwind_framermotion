@@ -1,19 +1,45 @@
 'use client'
 
-import {motion} from 'framer-motion';
+import {AnimatePresence, motion} from 'framer-motion';
+
+//variants
+const transitionVariants = {
+  initial: {
+    x: '100%',
+    width: '100%'
+  },
+  animate: {
+    x: '0%',
+    width: '0%'
+  }
+}
 
 interface Props {
   children: React.ReactNode;
 }
 
-const Transition = ( {children}: Props ) => {
+const Transition = () => {
   return (
-    <motion.div
-     initial={{ y: 20, opacity: 0}}
-     animate={{ y: 0, opacity: 1}}
-     transition={{ease: 'easeInOut', duration: 1 }}>
-      {children}
-    </motion.div>
+    <>
+      <motion.div className="fixed top-0 bottom-0 right-full w-screen h-screen z-30 bg-[#2e2257]"
+      variants={transitionVariants}
+      initial='initial'
+      animate='animate'
+      transition={ { delay: 0.2, duration: 0.6, ease: 'easeInOut'} }>
+      </motion.div>
+      <motion.div className="fixed top-0 bottom-0 right-full w-screen h-screen z-20 bg-[#3b2d71]"
+      variants={transitionVariants}
+      initial='initial'
+      animate='animate'
+      transition={ { delay: 0.4, duration: 0.6, ease: 'easeInOut'} }>
+      </motion.div>
+      <motion.div className="fixed top-0 bottom-0 right-full w-screen h-screen z-10 bg-[#2e2257]"
+      variants={transitionVariants}
+      initial='initial'
+      animate='animate'
+      transition={ { delay: 0.6, duration: 0.6, ease: 'easeInOut'} }>
+      </motion.div>
+    </>
   )
 }
 
