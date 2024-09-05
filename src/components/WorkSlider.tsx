@@ -10,7 +10,6 @@ import Image from "next/image";
 
 //icons
 import { BsArrowRight } from "react-icons/bs";
-import { workerData } from "worker_threads";
 
 // data
 const workSlides = {
