@@ -32,18 +32,20 @@ const aboutData = [
             {
                 title: 'Web Development',
                 icons: [
-                    <FaHtml5 />,
-                    <FaCss3 />,
-                    <FaJs />,
-                    <FaReact />,
-                    <SiNextdotjs />,
-                    <SiFramer />,
-                    <FaWordpress />,
+                    <FaHtml5 key={''} />,
+                    <FaCss3 key={''} />,
+                    <FaJs key={''} />,
+                    <FaReact key={''} />,
+                    <SiNextdotjs key={''} />,
+                    <SiFramer key={''} />,
+                    <FaWordpress key={''} />,
                 ],
+                stage: ''
             },
             {
                 title: 'UI/UX Design',
-                icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+                icons: [<FaFigma key={''} />, <SiAdobexd key={''} />, <SiAdobephotoshop key={''} />],
+                stage: ''
             },
         ],
     },
@@ -52,10 +54,12 @@ const aboutData = [
         info: [
             {
                 title: 'Webby Awards - Honoree',
+                icons: [],
                 stage: '2011 - 2012',
             },
             {
                 title: 'Adobe Design Achievement Awards - Finalist',
+                icons: [],
                 stage: '2009 - 2010',
             },
         ],
@@ -65,14 +69,17 @@ const aboutData = [
         info: [
             {
                 title: 'UX/UI Designer - XYZ Company',
+                icons: [],
                 stage: '2012 - 2023',
             },
             {
                 title: 'Web Developer - ABC Agency',
+                icons: [],
                 stage: '2010 - 2012',
             },
             {
                 title: 'Intern - DEF Corporation',
+                icons: [],
                 stage: '2008 - 2010',
             },
         ],
@@ -82,14 +89,17 @@ const aboutData = [
         info: [
             {
                 title: 'Web Development - ABC University, LA, CA',
+                icons: [],
                 stage: '2011',
             },
             {
                 title: 'Computer Science Diploma - AV Technical Institute',
+                icons: [],
                 stage: '2009',
             },
             {
                 title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
+                icons: [],
                 stage: '2006',
             },
         ],
@@ -222,7 +232,7 @@ export default function About() {
                                     <div className="flex gap-x-4">
                                         { item.icons?.map( (icon, iconIndex) => {
                                             return (
-                                                <div className="text-2-xl text-white">{icon}</div>
+                                                <div key={iconIndex} className="text-2-xl text-white">{icon}</div>
                                             )
                                         } ) }
                                     </div>

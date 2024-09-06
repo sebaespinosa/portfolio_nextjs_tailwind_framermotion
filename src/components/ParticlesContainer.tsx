@@ -5,7 +5,7 @@ import { useCallback } from 'react';
 
 const ParticlesContainer = () => {
   
-  const particlesInit = useCallback(async (engine) => {
+  const particlesInit = useCallback(async (engine: any) => {
     await loadFull(engine);
   }, []);
 
@@ -62,7 +62,7 @@ const ParticlesContainer = () => {
           enable: true,
         },
         move: {
-          directions: 'none',
+          direction: 'none',
           enable: true,
           outModes: {
             default: 'bounce'
